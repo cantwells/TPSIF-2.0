@@ -120,3 +120,28 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+   /* Footer */
+    .divider { 
+      border-top:1px solid #444; 
+      margin:3rem 0; 
+    }
+    .footer-note { 
+      padding:2rem 0; 
+      font-size:0.9rem; 
+      color:#ccc; 
+    }
+
+        .btn-contact {
+      border:1px solid #fff; 
+      color:#fff; 
+      padding:.75rem 1.5rem;
+      border-radius:4px; 
+      display:inline-block; 
+      text-decoration:none;
+    }
+    .btn-contact:hover { 
+      background:#ffc107; 
+      color:#132548; 
+      border-color:#ffc107; 
+    }
