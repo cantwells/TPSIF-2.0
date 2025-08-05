@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TPSIF – About</title>
+  <!-- Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap & custom CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- scroll animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0a1a33;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Banner accent */
+    .about-section .about-image img {
+      border-bottom: 4px solid #ffc107; /* yellow accent under image */
+    }
+    /* makes side-by-side layout */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .about-section .about-text {
+      flex: 1 1 300px;
+    }
+    .about-section .about-image {
+      flex: 0 0 700px;
+    }
+    .about-section .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Blue box around section text */
+    .blue-box {
+      background-color: #132548;
+      padding: 2rem;
+      border-radius: 8px;
+      color: #fff;
+      margin-bottom: 2rem;
+      border-left: 6px solid #ffc107; /* yellow accent */
+    }
+    /* Section headings accent */
+    .blue-box h2,
+    .blue-box h1 {
+      position: relative;
+      color: #fff;
+    }
+    .blue-box h2 {
+      margin-top: 6rem;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      border-bottom: 3px solid #ffc107; /* yellow underline */
+      padding-bottom: 0.5rem;
+    }
+    /* Increased spacing between sections */
+    .blue-box .row.text-center {
+      margin-bottom: 4rem;
+    }
+    .blue-box ul.list-unstyled {
+      margin-bottom: 4rem;
+    }
+    .blue-box ul.list-unstyled li {
+      margin-bottom: 2rem;
+    }
+
+    /* Pillars icons/text accent */
+    .blue-box h3 {
+      color: #ffc107; /* yellow title for pillars */
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-md navbar-blue bg-blue sticky-top">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/tpsLogo.png" alt="Fund Logo" class="navbar-logo" style="height:64px; margin-right:12px;">
+      TPSIF
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="strategy.html">Investment Strategy</a></li>
+        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="container py-5">
+    <div class="blue-box">
+      <div class="about-section">
+        <div class="about-image" data-aos="fade-right">
+          <img src="images/hedgeFundlogo.JPEG" alt="TPSIF Banner">
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <h1 style="font-size:2.5rem; font-weight:700;"> We are Trinity Prep’s Student Investment Fund</h1>
+          <p class="lead">
+            Founded in 2025, TPSIF is a student-run organization dedicated to hands-on investing
+            education and portfolio management.
+          </p>
+        </div>
+      </div>
+
+      <!-- Our Pillars **need to edit*** -->
+      <h2 class="mt-5 mb-4 text-center">Our Pillars</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="50">
+          <h3>Education</h3>
+          <p>Weekly workshops cover equity research, financial modeling, and market analysis led by senior analysts and industry speakers.</p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="150">
+          <h3>Portfolio Management</h3>
+          <p>Members pitch ideas, undergo Q&amp;A sessions, and vote on stocks and ETFs to include in our live fund, gaining real investment experience.</p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="250">
+          <h3>Professional Development</h3>
+          <p>Through alumni mentorship, recruiting workshops, and our annual conference, TPSIF prepares members for internships and careers in finance.</p>
+        </div>
+      </div>
+
+      <!-- Our History **need to edit***-->
+      <h2 class="mt-5 mb-4 text-center">Our History</h2>
+      <ul class="list-unstyled">
+        <li class="mb-3"><strong>2025 — Founded</strong><br>A group of students launched TPSIF to bring hands-on investment education to Trinity Prep.</li>
+        <li class="mb-3"><strong>2025 — First Live Fund</strong><br> something something </li>
+        <li class="mb-3"><strong>2025 — InvestPrep Conference</strong><br>wow look at us go we are awesome </li>
+      </ul>
+    </div>
+  </section>
+
+<!-- animation scroll JS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,  
+    once: true       
+  });
+</script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TPSIF – Team</title>
+
+  <!-- Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap & custom CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- Scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0a1a33;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+    }
+    /* Team banner, need to figure out delay of team members, too much delay */
+    .team-banner {
+      background: url('images/tpsLogo.png') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+      margin-bottom: 2rem;
+    }
+    .team-banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    /*I think this is where I need to make edits to make contrast higher but it feels like tried everything*/
+    .team-banner h1 {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff !important;
+      margin: 0;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+
+    /* Section boxes */
+    .section-box {
+      background-color: #132548;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      border-left: 6px solid #ffc107;
+    }
+
+    .team-section {
+      padding: 4rem 0;
+    }
+    .team-section h2 {
+      border-bottom: 3px solid #ffc107;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    .member-card,
+    .team-member {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    /* Headshot sizing for all members */
+    .member-card img,
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto;
+      border: 4px solid #ffc107;
+    }
+    .member-card h3,
+    .team-member h3 {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .member-card p.position,
+    .team-member p.position {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+    .info-buttons .btn {
+      margin: 0.25rem;
+      font-size: 0.85rem;
+      border-color: #ffc107;
+      color: #ffc107;
+    }
+    .info-buttons .btn:hover {
+      background-color: #ffc107;
+      color: #132548;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-md navbar-blue bg-blue sticky-top">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/tpsLogo.png" alt="Fund Logo" class="navbar-logo" style="height:64px; margin-right:12px;">
+      TPSIF
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item active"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="strategy.html">Investment Strategy</a></li>
+        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Team Banner -->
+  <section class="team-banner" data-aos="fade-in">
+    <h1>TPSIF Team</h1>
+  </section>
+
+  <!-- Executive Board -->
+  <section class="container team-section section-box">
+    <h2 class="text-center text-white">Executive Board</h2>
+    <div class="row">
+      <div class="col-md-3 team-member" data-aos="fade-up">
+        <img src="images/Byron-Headshot-e1517246664963.jpg" alt="Exec 1">
+        <h3>Thomas Bonos</h3>
+        <p class="position">Investment Officer</p>
+        <div class="info-buttons">
+          <a href="#" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:exec1@trinityprep.edu" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/Byron-Headshot-e1517246664963.jpg" alt="Exec 2">
+        <h3>Nikhil Daniel</h3>
+        <p class="position">Fund Manager</p>
+        <div class="info-buttons">
+          <a href="https://www.linkedin.com/in/nikhil-daniel26/" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:exec2@trinityprep.edu" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/Byron-Headshot-e1517246664963.jpg" alt="Exec 3">
+        <h3>Sarah Cantwell</h3>
+        <p class="position">Technology Officer</p>
+        <div class="info-buttons">
+          <a href="https://www.linkedin.com/in/sarah-cantwell-73171a358/" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:exec3@trinityprep.edu" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/Byron-Headshot-e1517246664963.jpg" alt="Exec 4">
+        <h3>Owen Raffa</h3>
+        <p class="position">Education Officer</p>
+        <div class="info-buttons">
+          <a href="https://www.linkedin.com/in/owen-raffa-aa721236b/" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:exec4@trinityprep.edu" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Leaders -->
+ <section class="container team-section section-box">
+    <h2 class="text-center text-white" data-aos="fade-up">Sector Leaders</h2>
+    <div class="row">
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/leader1.jpg" alt="Leader 1">
+        <h3>Isabella Moore</h3>
+        <p class="position">Healthcare Associate</p>
+        <div class="info-buttons">
+          <a href="https://www.linkedin.com/in/isabella-moore-0303b5306/" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:moorei26@trinityprep.org" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/leader2.jpg" alt="Leader 2">
+        <h3>Connor Brady</h3>
+        <p class="position">IT Associate</p>
+        <div class="info-buttons">
+          <a href="#" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:bradyc26@trinityprep.org" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/leader3.jpg" alt="Leader 3">
+        <h3>Gustavo Membreno</h3>
+        <p class="position">Consumer Associate</p>
+        <div class="info-buttons">
+          <a href="#" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:membrenog26@trinityprep.org" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member" data-aos="fade-up" data-aos-delay="400">
+        <img src="images/leader4.jpg" alt="Leader 4">
+        <h3>Lucy Chong</h3>
+        <p class="position">Energy/Mining Associate</p>
+        <div class="info-buttons">
+          <a href="#" class="btn btn-outline-light btn-sm">LinkedIn</a>
+          <a href="mailto:chongl26@trinityprep.org" class="btn btn-outline-light btn-sm">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Other Members -->
+  <section class="container team-section section-box">
+    <h2 class="text-center text-white">Team Members</h2>
+    <div class="row">
+      <div class="col-md-6 member-card" data-aos="fade-up">
+        <img src="images/member5.jpg" alt="Member 5">
+        <h3>Alejandro Castillo</h3>
+        <p class="position">Analyst </p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/member6.jpg" alt="Member 6">
+        <h3>Liann Kurlansik</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/member7.jpg" alt="Member 7">
+        <h3>Sam Makki</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/member8.jpg" alt="Member 8">
+        <h3>Macyn Singleton</h3>
+        <p class="position">Analyst</p>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-md-6 member-card" data-aos="fade-up">
+        <img src="images/member5.jpg" alt="Member 5">
+        <h3>Brody Wordell</h3>
+        <p class="position">Analyst </p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/member6.jpg" alt="Member 6">
+        <h3>Luke Kang</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/member7.jpg" alt="Member 7">
+        <h3>Thomas Hoskins</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/member8.jpg" alt="Member 8">
+        <h3>Olivia Agnew</h3>
+        <p class="position">Analyst</p>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-md-6 member-card" data-aos="fade-up">
+        <img src="images/member5.jpg" alt="Member 5">
+        <h3>Carina Zhang</h3>
+        <p class="position">Analyst </p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/member6.jpg" alt="Member 6">
+        <h3>Oliver Nelson</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/member7.jpg" alt="Member 7">
+        <h3>Victoria Moore</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/member8.jpg" alt="Member 8">
+        <h3>Vaishnavi Surapaneni</h3>
+        <p class="position">Analyst</p>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-md-6 member-card" data-aos="fade-up">
+        <img src="images/member5.jpg" alt="Member 5">
+        <h3>Daniel Williams</h3>
+        <p class="position">Analyst </p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/member6.jpg" alt="Member 6">
+        <h3>Campbell Alch</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/member7.jpg" alt="Member 7">
+        <h3>Alex Barry</h3>
+        <p class="position">Analyst</p>
+      </div>
+      <div class="col-md-6 member-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/member8.jpg" alt="Member 8">
+        <h3>Parker Davis</h3>
+        <p class="position">Analyst</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS & Bootstrap JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:600, once:true});</script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

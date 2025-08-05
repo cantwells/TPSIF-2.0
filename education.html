@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TPSIF – Education</title>
+  <!-- Playfair Display font-->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap & custom CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- AOS Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+  <style>
+    body { 
+      background-color: #0a1a33; 
+      color: #fff; 
+      font-family: 'Playfair Display', serif; 
+    }
+
+    /* Banner */
+    .edu-banner {
+      background: url('images/tpsLogo.png') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .edu-banner::after {
+      content: '';
+      position: absolute; top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.4);
+    }
+    .edu-banner h1 {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff !important;  
+      margin: 0;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #ffc107;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Link accents */
+    .resource-list a {
+      display: block;
+      color: #ffc107;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+    }
+    .resource-list a:hover {
+      background: #ffc107;
+      color: #132548;
+      padding-left: 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* Section boxes */
+    .section-box {
+      background-color: #132548;
+      padding: 2rem;
+      margin-bottom: 0rem;
+      border-radius: 8px;
+      border-left: 6px solid #ffc107;
+    }
+
+    /* Intro styling */
+    .intro-img {
+      display: block;
+      margin: 1rem auto;
+      border: 8px solid #ffc107;
+      border-radius: 4px;
+      max-width: 100%;
+      background: #fff;
+    }
+
+    /* Button accents */
+    .btn-primary {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: #132548;
+      font-weight: 700;
+    }
+    .btn-primary:hover {
+      background-color: #fff;
+      color: #132548;
+    }
+    /* Calendar styling */
+    #calendar {
+      width: 100%; background: #fff;
+      border-radius: 8px; padding: 1rem;
+      color: #0f1f3a;
+    }
+    #calendar .fc-toolbar-title,
+    #calendar .fc-col-header-cell-cushion,
+    #calendar .fc-daygrid-day-number,
+    #calendar .fc-daygrid-day-top {
+      color: #0f1f3a !important;
+    }
+    #calendar .fc-button {
+      background: #132548; border: none; color: #fff;
+    }
+    #calendar .fc-button:hover {
+      background: #0f1f3a;
+    }
+
+    /* Signup styling */
+    .signup-form label { color: #fff; }
+    .signup-form .form-control,
+    .signup-form .btn { border-radius: 4px; }
+    .signup-form .btn { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-md navbar-blue bg-blue sticky-top">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/tpsLogo.png" alt="Fund Logo" class="navbar-logo" style="height:64px; margin-right:12px;">
+      TPSIF
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="strategy.html">Investment Strategy</a></li>
+        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="edu-banner" data-aos="fade-in">
+    <h1>TPSIF Learning Resources</h1>
+  </section>
+
+  <!-- Intro -->
+  <section class="container intro" data-aos="fade-up" data-aos-delay="100">
+    <div class="section-box">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="section-title">Empowering Through Education</h2>
+          <p class="lead">At TPSIF, we believe financial literacy is the cornerstone of informed decision-making. Our learning resources—ranging from courses and videos to books and interactive workshops—are designed to guide you from fundamentals to advanced investment strategies.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="images/davidBriskin.jpg" alt="Education illustration" class="intro-img img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Learning Resrouces-->
+  <section class="container py-5" data-aos="fade-up" data-aos-delay="100">
+
+  <!-- Online Courses -->
+
+   <!-- Videos -->
+    <div class="section-box">
+      <h2 class="section-title text-center">Online Courses</h2>
+      <div class="resource-list">
+        <a href="https://www.youtube.com/playlist?list=PL8FB14A2200B87185" target="_blank">Financial Markets – Yale</a>
+        <a href="https://www.coursera.org/learn/wharton-finance" target="_blank">Introduction to Corporate Finance – UPenn Wharton</a>
+      </div>
+
+      <h2 class="section-title text-center mt-5">Videos</h2>
+      <div class="resource-list">
+      <a href="https://www.youtube.com/watch?v=3BOE1A8HXeE&ab_channel=CharlesSchwab" target="_blank">Fundamental Analysis – Charles Schwab</a>
+      <a href="https://www.youtube.com/watch?v=fb7YCVR5fIU&ab_channel=LongTermMindset" target="_blank">Long-Term Mindset</a>
+      <a href="https://www.youtube.com/watch?v=gLULdxrS-CU&t=68s&ab_channel=KenjiExplains" target="_blank">DCF Models – Kenji Explains</a>
+      <a href="https://www.youtube.com/watch?v=CPtBJN3SAvs&ab_channel=KenjiExplains" target="_blank">COMPS – Kenji Explains</a>
+      <a href="https://www.youtube.com/watch?v=rvL2tQUFZtE&ab_channel=GirlsAreInvestorsGAINUK" target="_blank">Stock Pitches – Girls Are Investors</a>
+      <a href="https://www.youtube.com/watch?v=ZZdTqd8bkQ0&ab_channel=PhoenixLearning" target="_blank">Stock Pitches – Phoenix Learning</a>
+      </div>
+
+      <!-- Books -->
+      <h2 class="section-title text-center mt-5">Books</h2>
+      <div class="resource-list">
+      <a href="https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661" target="_blank">The Intelligent Investor by Benjamin Graham</a>
+      <a href="https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021" target="_blank">Principles: Life and Work by Ray Dalio</a>
+    </div>
+  </section>
+
+ <!-- Calendar and Signup -->
+  <section class="container py-5" data-aos="fade-up" data-aos-delay="200">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="section-box">
+          <h2 class="section-title text-center">Workshop Calendar</h2>
+          <div id="calendar"></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="section-box text-center">
+          <h2 class="section-title">Upcoming Workshops</h2>
+          <p class="lead mb-4">Sign up for our hands-on workshops led by industry experts.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScw9g0-zr31Jg9qh4ZHcT8QC66i0-5QcBhl9JwNc6vyzAX4fw/viewform?usp=header" target="_blank" class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Scripts *** Here is where we update out workshops
+  I'm having trouble formatting the calander with the month,day etc. I tried plugins but that wasnt working and made the whole thing disapear all together-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:600, once:true});</script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: { left: 'prev,next today', center: 'title' },
+        events: [
+          { title: 'Equity Analysis', start: '2025-09-15', description: 'In-depth stock evaluation.' },
+          { title: 'Financial Modeling', start: '2025-10-01', description: 'Build your first model.' },
+          { title: 'ETF Strategies', start: '2025-10-20', description: 'Learn ETF investing.' },
+          { title: 'Risk Management', start: '2025-11-05', description: 'Mitigate investment risks.' }
+        ],
+        eventDidMount: function(info) {
+          info.el.setAttribute('title', info.event.extendedProps.description);
+        }
+      });
+      calendar.render();
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
