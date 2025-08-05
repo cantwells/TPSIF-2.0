@@ -30,21 +30,34 @@
       text-shadow: 0 1px 3px rgba(0,0,0,0.7);
       margin-bottom: 2rem;
     }
+    /*This is the overlay that adjust the banners contrast*/
     .team-banner::after {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.3); /* Changed from 0.577 to 0.3 */
     }
     /*I think this is where I need to make edits to make contrast higher but it feels like tried everything*/
     .team-banner h1 {
       position: relative;
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: 900;
       color: #ffffff !important;
       margin: 0;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7) !important;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 10;
+      filter: none !important;
     }
+
+    /*This is the fade in animation for the team banner, I am trying to change it to a white fade, maybe that will fix*/
+    .fade-in {
+      background-color: #ffffff;
+      color: #ffffff;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    
 
     /* Section boxes */
     .section-box {
@@ -152,6 +165,7 @@
   </nav>
 
   <!-- Team Banner -->
+   <!--html section for the text you want to contrast-->
   <section class="team-banner" data-aos="fade-in">
     <h1>TPSIF Team</h1>
   </section>
