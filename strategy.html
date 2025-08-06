@@ -66,6 +66,43 @@
       padding-bottom: 0.5rem;
     }
     
+    /* Asset Allocation Image Styling */
+    .asset-allocation-content {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+    .allocation-images {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .allocation-image {
+      text-align: left;
+    }
+    .allocation-image img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .allocation-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    }
+    
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      .allocation-images {
+        align-items: center;
+      }
+      .allocation-image img {
+        width: 100px;
+      }
+    }
+    
     /* Footer */
     .divider { 
       border-top:1px solid #444; 
@@ -90,6 +127,8 @@
       color:#132548; 
       border-color:#ffc107; 
     }
+    
+
   </style>
 </head>
 <body>
@@ -128,11 +167,19 @@
   <!-- Asset Allocation -->
   <section class="container section-box" data-aos="fade-up" data-aos-delay="100">
     <h2 class="section-title">Asset Allocation</h2>
-    <ul>
-      <li> money stuff</li>
-      <li>money stuff</li>
-      <li>money stuff.</li>
-    </ul>
+    <div class="asset-allocation-content">
+      <div class="allocation-images">
+        <div class="allocation-image">
+          <img src="images/Benenati.png" alt="Asset Allocation Chart" data-aos="flip-left" data-aos-delay="200">
+        </div>
+        <div class="allocation-image">
+          <img src="images/garton.png" alt="Garton Chart" data-aos="flip-left" data-aos-delay="300">
+        </div>
+        <div class="allocation-image">
+          <img src="images/granny.png" alt="Granny Chart" data-aos="flip-left" data-aos-delay="400">
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Investment Process -->
