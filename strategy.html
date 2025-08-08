@@ -93,6 +93,208 @@
       box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
     }
     
+    /* Connor: makes images clickable with hover stuff */
+    .allocation-image {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .allocation-image:hover {
+      transform: translateX(10px);
+    }
+    
+    /* Connor: popup window styling for stock details */
+    .stock-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    
+    /* Connor: main container for stock info */
+    .modal-content {
+      background-color: #132548;
+      margin: 2% auto;
+      padding: 0;
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(255, 193, 7, 0.3);
+    }
+    
+    /* Connor: header with stock name and close button */
+    .modal-header {
+      background: linear-gradient(135deg, #ffc107, #ffb300);
+      color: #132548;
+      padding: 1.5rem;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .modal-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    /* Connor: close button styling */
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #132548;
+      cursor: pointer;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+    .close-btn:hover {
+      background-color: rgba(19, 37, 72, 0.2);
+    }
+    
+    /* Connor: main body area with the stock info */
+    .modal-body {
+      padding: 2rem;
+      color: #fff;
+    }
+    
+    /* Connor: grid layout for presenter and stock info */
+    .stock-details-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Connor: presenter info styling */
+    .presenter-info {
+      text-align: center;
+    }
+    
+    .presenter-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffc107;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    }
+    
+    .presenter-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffc107;
+      margin-bottom: 0.5rem;
+    }
+    
+    .presenter-role {
+      color: #ccc;
+      font-size: 1rem;
+    }
+    
+    /* Connor: investment details styling */
+    .investment-details h3 {
+      color: #ffc107;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 0.5rem;
+    }
+    
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #2a4a7a;
+    }
+    
+    .detail-label {
+      font-weight: 600;
+      color: #ffc107;
+    }
+    
+    .detail-value {
+      color: #fff;
+    }
+    
+    /* Connor: buttons for slide deck and videos */
+    .action-buttons {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .action-btn {
+      flex: 1;
+      min-width: 200px;
+      padding: 1rem 1.5rem;
+      border: 2px solid #ffc107;
+      background: transparent;
+      color: #ffc107;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .action-btn:hover {
+      background: #ffc107;
+      color: #132548;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+    }
+    
+    /* Connor: container for youtube videos */
+    .video-container {
+      margin-top: 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0a1a33;
+      padding: 1rem;
+    }
+    
+    .video-container h4 {
+      color: #ffc107;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .video-placeholder {
+      width: 100%;
+      height: 300px;
+      background: #0a1a33;
+      border: 2px dashed #ffc107;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffc107;
+      font-size: 1.1rem;
+    }
+    
     /* Responsive design for smaller screens */
     @media (max-width: 768px) {
       .allocation-images {
@@ -100,6 +302,25 @@
       }
       .allocation-image img {
         width: 100px;
+      }
+      
+      /* Connor: mobile adjustments for popup */
+      .modal-content {
+        width: 95%;
+        margin: 5% auto;
+      }
+      
+      .stock-details-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+      }
+      
+      .action-btn {
+        min-width: auto;
       }
     }
     
@@ -169,14 +390,17 @@
     <h2 class="section-title">Asset Allocation</h2>
     <div class="asset-allocation-content">
       <div class="allocation-images">
+        <!-- Connor: first stock pick - not clickable yet -->
         <div class="allocation-image">
-          <img src="images/Benenati.png" alt="Asset Allocation Chart" data-aos="flip-left" data-aos-delay="200">
+          <img src="images/Benenati.png" alt="Stock Pick - Coming Soon" data-aos="flip-left" data-aos-delay="200">
         </div>
+        <!-- Connor: second stock pick - not clickable yet -->
         <div class="allocation-image">
-          <img src="images/garton.png" alt="Garton Chart" data-aos="flip-left" data-aos-delay="300">
+          <img src="images/Garton.png" alt="Stock Pick - Coming Soon" data-aos="flip-left" data-aos-delay="300">
         </div>
-        <div class="allocation-image">
-          <img src="images/granny.png" alt="Granny Chart" data-aos="flip-left" data-aos-delay="400">
+        <!-- Connor: granny nannies stock - this one is clickable -->
+        <div class="allocation-image" onclick="openStockModal('granny-modal')">
+          <img src="images/Granny.png" alt="Granny Nannies Stock Pick" data-aos="flip-left" data-aos-delay="400">
         </div>
       </div>
     </div>
@@ -207,10 +431,109 @@
     <a href="contact.html" class="btn-contact mt-3">Contact Us</a>
   </section>
 
+  <!-- Connor: popup for granny nannies stock -->
+  <div id="granny-modal" class="stock-modal">
+    <div class="modal-content">
+      <!-- Connor: header with stock name and close button -->
+      <div class="modal-header">
+        <h2 class="modal-title">Granny Nannies Inc.</h2>
+        <button class="close-btn" onclick="closeStockModal('granny-modal')">&times;</button>
+      </div>
+      
+      <!-- Connor: main area with stock info -->
+      <div class="modal-body">
+        <div class="stock-details-grid">
+          <!-- Connor: presenter info -->
+          <div class="presenter-info">
+            <img src="images/Byron-Headshot-e1517246664963.jpg" alt="Presenter Photo" class="presenter-photo">
+            <div class="presenter-name">Byron Lawson</div>
+            <div class="presenter-role">Senior Analyst</div>
+          </div>
+          
+          <!-- Connor: investment details and numbers -->
+          <div class="investment-details">
+            <h3>Investment Details</h3>
+            <div class="detail-item">
+              <span class="detail-label">Stock Symbol:</span>
+              <span class="detail-value">GRNY</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Investment Amount:</span>
+              <span class="detail-value">$25,000</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Purchase Date:</span>
+              <span class="detail-value">January 15, 2025</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Current Value:</span>
+              <span class="detail-value">$28,750</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Return:</span>
+              <span class="detail-value" style="color: #28a745;">+15% ($3,750)</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Sector:</span>
+              <span class="detail-value">Healthcare Services</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Connor: buttons for slide deck and video -->
+        <div class="action-buttons">
+          <a href="#" class="action-btn" onclick="alert('No slide deck')">
+            View Slide Deck
+          </a>
+          <a href="#" class="action-btn" onclick="alert('No presentation video')">
+            Watch Presentation
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
   <!-- AOS & Bootstrap JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({duration:600, once:true});</script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Connor: js stuff to make the stock popups work -->
+  <script>
+    // Connor: opens the popup when you click a stock
+    function openStockModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // stops page scrolling
+    }
+    
+    // Connor: closes the popup 
+    function closeStockModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // lets you scroll again
+    }
+    
+    // Connor: close popup if you click outside it
+    window.onclick = function(event) {
+      if (event.target.classList.contains('stock-modal')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    // Connor: close popup when you hit escape key
+    document.onkeydown = function(event) {
+      if (event.key === 'Escape') {
+        var modals = document.querySelectorAll('.stock-modal');
+        for (var i = 0; i < modals.length; i++) {
+          modals[i].style.display = 'none';
+        }
+        document.body.style.overflow = 'auto';
+      }
+    }
+  </script>
 </body>
 </html>
