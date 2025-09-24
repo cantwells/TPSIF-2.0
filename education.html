@@ -29,6 +29,7 @@
       justify-content: center;
       position: relative;
       color: #fff;
+      border-bottom: 4px solid #ffc107; /* yellow accent for banner bottom */
       text-shadow: 0 1px 3px rgba(0,0,0,0.7);
     }
 
@@ -267,10 +268,9 @@
         initialView: 'dayGridMonth',
         headerToolbar: { left: 'prev,next today', center: 'title' },
         events: [
-          { title: 'Equity Analysis', start: '2025-09-15', description: 'In-depth stock evaluation.' },
-          { title: 'Financial Modeling', start: '2025-10-01', description: 'Build your first model.' },
-          { title: 'ETF Strategies', start: '2025-10-20', description: 'Learn ETF investing.' },
-          { title: 'Risk Management', start: '2025-11-05', description: 'Mitigate investment risks.' }
+          { title: 'AI in Finance', start: '2025-09-24', description: 'AI in Finance' },
+          { title: 'Brad Osleger Guest Lecture', start: '2025-11-13', description: 'Learn ETF investing.' },
+          { title: 'Brett Sealy Guest Lecture', start: '2025-10-15', description: 'Mitigate investment risks.' }
         ],
         eventDidMount: function(info) {
           info.el.setAttribute('title', info.event.extendedProps.description);
